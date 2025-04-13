@@ -72,18 +72,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### Docker
 As instruções abaixo explicam como construir e rodar a aplicação usando Docker.
 
-1. Verifique se seu .env contém a URL correta da API
+1. Verifique se seu .env contém a URL correta da API. No arquivo .env dentro de tarefas_front/:
 
-No arquivo .env dentro de tarefas_front/:
+- REACT_APP_URL_BACK=http://app:5000/tarefas
 
-REACT_APP_URL_BACK=http://app:5000/tarefas
+2. Execute o build e inicie os containers. No terminal, acesse a pasta tarefas_back/ (onde está o docker-compose.yml) e execute:
 
-3. Execute o build e inicie os containers
+- docker-compose up --build -d
 
-No terminal, acesse a pasta tarefas_back/ (onde está o docker-compose.yml) e execute:
+3. Acessando a aplicação
 
-docker-compose up --build -d
-
-5. Acessando a aplicação
-
-Frontend: http://localhost:3000
+- Frontend: http://localhost:3000
