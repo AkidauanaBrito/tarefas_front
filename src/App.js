@@ -3,7 +3,7 @@ import FormTarefa from "./componentes/FormTarefa";
 import ListaDeTarefas from "./componentes/ListaDeTarefas";
 import axios from "axios";
 
-const URL_BACK = 'http://localhost:5000/tarefas';
+const URL_BACK = process.env.REACT_APP_URL_BACK || 'http://localhost:5000/tarefas';
 
 function App() {
   const [tarefas, setTarefas] = useState([]);
